@@ -6,7 +6,7 @@ import { ABOUT_HERO_IMAGE } from "@/lib/constants";
 
 export function AboutHero() {
   return (
-    <section className="relative flex min-h-[60vh] w-full items-center overflow-hidden bg-neutral-950 pt-20">
+    <section className="relative min-h-[60vh] w-full overflow-hidden bg-neutral-950">
       <Image
         src={ABOUT_HERO_IMAGE}
         alt="Luxe Auto Accessories workshop"
@@ -17,7 +17,7 @@ export function AboutHero() {
       <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/80 to-neutral-950/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:px-12 lg:px-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-16 pt-40 md:px-12 md:pb-20 md:pt-48 lg:px-20">
         <div className="w-full md:w-[60%] lg:w-[55%]">
           <motion.p
             initial={{ opacity: 0, y: 16 }}

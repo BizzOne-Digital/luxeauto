@@ -12,7 +12,7 @@ export function PageHero({
   subtitle: string;
 }) {
   return (
-    <section className="relative flex min-h-[50vh] w-full items-center justify-center overflow-hidden bg-neutral-950 pt-20 text-center">
+    <section className="relative min-h-[50vh] w-full overflow-hidden bg-neutral-950 text-center">
       <div
         className="absolute inset-0 opacity-[0.07]"
         style={{
@@ -23,7 +23,7 @@ export function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-950" />
 
-      <div className="relative z-10 max-w-3xl px-6 py-16 md:px-12">
+      <div className="relative z-10 mx-auto max-w-3xl px-6 pb-16 pt-40 md:px-12 md:pb-20 md:pt-48">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
