@@ -5,6 +5,7 @@ type ButtonBaseProps = {
   variant?: "primary" | "secondary" | "ghost";
   className?: string;
   children: React.ReactNode;
+  disabled?: boolean;
 };
 
 type ButtonAsLink = ButtonBaseProps & {
@@ -39,8 +40,14 @@ export function Button({
   href,
   onClick,
   type = "button",
+  disabled,
 }: ButtonProps) {
-  const classes = cn(baseClasses, variantClasses[variant], className);
+  const classes = cn(
+    baseClasses,
+    variantClasses[variant],
+    disabled && "opacity-70 pointer-events-none",
+    className
+  );
 
   if (href) {
     return (
@@ -51,7 +58,12 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+    >
       {children}
     </button>
   );
