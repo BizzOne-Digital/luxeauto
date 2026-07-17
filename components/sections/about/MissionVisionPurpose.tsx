@@ -14,7 +14,7 @@ export function MissionVisionPurpose() {
         <H2>Mission, Vision &amp; Purpose</H2>
       </div>
 
-      <div className="mb-20 grid grid-cols-1 items-start gap-6 md:gap-8 lg:grid-cols-5">
+      <div className="mb-16 grid grid-cols-1 gap-6 md:mb-20 md:gap-8 lg:grid-cols-5 lg:items-stretch">
         {MISSION_VISION_PURPOSE.map((item, i) => (
           <motion.div
             key={item.title}

@@ -217,7 +217,7 @@ export const MISSION_VISION_PURPOSE = [
     title: "Purpose",
     heading: "Genuine Care for Every Vehicle",
     description:
-      "We treat every car we work on as if it were our own. Our purpose is to build lasting relationships through honest advice, quality products, and exceptional service.",
+      "We treat every car as if it were our own — building lasting relationships through honesty and genuine care.",
     width: "narrow" as const,
   },
 ];
