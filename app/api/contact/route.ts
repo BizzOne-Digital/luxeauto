@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -9,6 +9,15 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { error: "Name, email, and message are required." },
       { status: 400 }
+    );
+  }
+
+  const resend = getResend();
+  if (!resend) {
+    console.error("RESEND_API_KEY is not set — contact form cannot send email.");
+    return NextResponse.json(
+      { error: "Email is not configured yet. Please try again later." },
+      { status: 503 }
     );
   }
 
