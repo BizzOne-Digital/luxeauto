@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { H3, Body } from "@/components/ui/Heading";
@@ -35,9 +36,13 @@ export function ServicesGrid() {
               </div>
               <div>
                 <H3 className="mb-4">{service.title}</H3>
-                <Body muted className="mb-0">
-                  {service.description}
-                </Body>
+                <Body muted>{service.description}</Body>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="inline-flex items-center gap-1 font-semibold text-red-500 transition-colors hover:text-red-600"
+                >
+                  Learn More <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </motion.div>
           );

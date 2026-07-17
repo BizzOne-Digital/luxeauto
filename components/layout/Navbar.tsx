@@ -41,7 +41,7 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 md:px-12 lg:px-8 xl:px-20">
         <Link href="/" className="flex shrink-0 items-center py-3">
           <Image
             src="/logos/logo-on-dark.png"
@@ -53,7 +53,7 @@ export function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-10">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -69,14 +69,18 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex xl:gap-6">
           <a
             href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-            className="text-sm font-medium text-white/85 transition-colors hover:text-white"
+            className="whitespace-nowrap text-sm font-medium text-white/85 transition-colors hover:text-white"
           >
             {SITE.phone}
           </a>
-          <Button href="/contact" variant="primary" className="px-6 py-2.5">
+          <Button
+            href="/contact"
+            variant="primary"
+            className="whitespace-nowrap px-6 py-2.5"
+          >
             Book Now
           </Button>
         </div>

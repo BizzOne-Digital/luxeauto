@@ -449,7 +449,7 @@ export const SERVICES = [
       "https://images.unsplash.com/photo-1633586020715-0b462f444ed3?w=900&q=80",
   },
   {
-    slug: "mats-trunk-liner-installation",
+    slug: "car-mats-trunk-liner-installation",
     title: "Car Mats & Trunk Liner Installation",
     description:
       "Precision fitting of floor mats, boot liners, and trunk protection. Heavy-duty rubber, carpet, or 3D moulded options installed for maximum coverage and fit.",
@@ -457,12 +457,12 @@ export const SERVICES = [
       "https://images.unsplash.com/photo-1553260188-75a8d6205b6c?w=900&q=80",
   },
   {
-    slug: "window-visor-installation",
+    slug: "window-visor-rain-guard-installation",
     title: "Window Visor / Rain Guard Installation",
     description:
       "Expert fitting of window visors and rain guards, allowing airflow while keeping rain out — installed cleanly with no residue or panel damage.",
     image:
-      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=900&q=80",
+      "https://images.unsplash.com/photo-1744236404781-530428ffbad5?w=900&q=80",
   },
 ];
 

@@ -14,7 +14,9 @@ export async function POST(request: Request) {
 
   const resend = getResend();
   if (!resend) {
-    console.error("RESEND_API_KEY is not set — contact form cannot send email.");
+    console.error(
+      "RESEND_API_KEY is not set — contact form cannot send email."
+    );
     return NextResponse.json(
       { error: "Email is not configured yet. Please try again later." },
       { status: 503 }
