@@ -1,5 +1,15 @@
 import mongoose, { Schema, models, model } from "mongoose";
 
+export interface IProductVariant {
+  name: string;
+  images: string[];
+}
+
+export interface IProductCompatibility {
+  categories: { label: string; models: string[] }[];
+  guideImage?: string;
+}
+
 export interface IProduct {
   name: string;
   slug: string;
@@ -11,6 +21,9 @@ export interface IProduct {
   badge?: "BEST SELLER" | "POPULAR" | "NEW" | "PREMIUM" | "PROFESSIONAL";
   rating?: number;
   reviewCount?: number;
+  features?: string[];
+  compatibility?: IProductCompatibility;
+  variants?: IProductVariant[];
 }
 
 const ProductSchema = new Schema<IProduct>(
@@ -28,6 +41,34 @@ const ProductSchema = new Schema<IProduct>(
     },
     rating: { type: Number, default: 4.8 },
     reviewCount: { type: Number, default: 0 },
+    features: { type: [String], default: undefined },
+    compatibility: {
+      type: new Schema(
+        {
+          categories: [
+            {
+              label: { type: String, required: true },
+              models: { type: [String], required: true },
+            },
+          ],
+          guideImage: { type: String },
+        },
+        { _id: false }
+      ),
+      default: undefined,
+    },
+    variants: {
+      type: [
+        new Schema(
+          {
+            name: { type: String, required: true },
+            images: { type: [String], required: true },
+          },
+          { _id: false }
+        ),
+      ],
+      default: undefined,
+    },
   },
   { timestamps: true }
 );

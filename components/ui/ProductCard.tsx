@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
 
 export type ProductCardData = {
@@ -9,11 +10,12 @@ export type ProductCardData = {
   compareAtPrice?: number;
   badge?: string;
   image: string;
+  detailHref?: string;
 };
 
 export function ProductCard({ product }: { product: ProductCardData }) {
-  return (
-    <div className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover">
+  const content = (
+    <>
       <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
         <Image
           src={product.image}
@@ -46,6 +48,19 @@ export function ProductCard({ product }: { product: ProductCardData }) {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
+
+  const className =
+    "group block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover";
+
+  if (product.detailHref) {
+    return (
+      <Link href={product.detailHref} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }

@@ -1,3 +1,8 @@
+import {
+  PREMIUM_UNIVERSAL_SEAT_COVERS,
+  getDefaultVariant,
+} from "@/lib/products/premium-universal-seat-covers";
+
 export const SITE = {
   name: "Luxe Auto Accessories",
   tagline: "Passion for Cars. Commitment to Quality.",
@@ -231,6 +236,7 @@ export type Product = {
   badge?: "BEST SELLER" | "POPULAR" | "NEW" | "PREMIUM" | "PROFESSIONAL";
   description: string;
   image: string;
+  detailHref?: string;
 };
 
 export const CATEGORIES = [
@@ -345,6 +351,17 @@ export const PRODUCTS: Product[] = [
       "Handcrafted premium leather, custom-fitted for a luxurious feel.",
     image:
       "https://images.unsplash.com/photo-1760161339261-56487b766a17?w=800&q=80",
+  },
+  {
+    slug: PREMIUM_UNIVERSAL_SEAT_COVERS.slug,
+    name: PREMIUM_UNIVERSAL_SEAT_COVERS.name,
+    category: PREMIUM_UNIVERSAL_SEAT_COVERS.category,
+    price: PREMIUM_UNIVERSAL_SEAT_COVERS.price,
+    compareAtPrice: PREMIUM_UNIVERSAL_SEAT_COVERS.compareAtPrice,
+    badge: PREMIUM_UNIVERSAL_SEAT_COVERS.badge,
+    description: PREMIUM_UNIVERSAL_SEAT_COVERS.shortDescription,
+    image: getDefaultVariant().images[0],
+    detailHref: `/products/${PREMIUM_UNIVERSAL_SEAT_COVERS.slug}`,
   },
   {
     slug: "neoprene-waterproof-seat-cover-set",
