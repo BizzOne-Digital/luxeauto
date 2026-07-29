@@ -1,21 +1,19 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
+import { useQuickView } from "@/components/providers/QuickViewProvider";
+import type { Product } from "@/lib/constants";
 
-export type ProductCardData = {
-  slug: string;
-  name: string;
-  category: string;
-  price: number;
-  compareAtPrice?: number;
-  badge?: string;
-  image: string;
-  detailHref?: string;
-};
+export function ProductCard({ product }: { product: Product }) {
+  const { openQuickView } = useQuickView();
 
-export function ProductCard({ product }: { product: ProductCardData }) {
-  const content = (
-    <>
+  return (
+    <button
+      type="button"
+      onClick={() => openQuickView(product)}
+      className="group block w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left shadow-card transition-all duration-300 hover:scale-[1.02] hover:shadow-card-hover"
+    >
       <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
         <Image
           src={product.image}
@@ -48,19 +46,6 @@ export function ProductCard({ product }: { product: ProductCardData }) {
           )}
         </div>
       </div>
-    </>
+    </button>
   );
-
-  const className =
-    "group block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover";
-
-  if (product.detailHref) {
-    return (
-      <Link href={product.detailHref} className={className}>
-        {content}
-      </Link>
-    );
-  }
-
-  return <div className={className}>{content}</div>;
 }

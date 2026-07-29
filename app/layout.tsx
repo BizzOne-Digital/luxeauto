@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { QuickViewProvider } from "@/components/providers/QuickViewProvider";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <QuickViewProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </QuickViewProvider>
       </body>
     </html>
   );
