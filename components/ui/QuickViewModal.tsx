@@ -6,6 +6,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { VariantGallery } from "@/components/sections/product-detail/VariantGallery";
+import { ProductDetailsGallery } from "@/components/ui/ProductDetailsGallery";
 import type { Product } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -79,7 +81,7 @@ export function QuickViewModal({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative grid max-h-[90vh] w-full max-w-3xl grid-cols-1 overflow-y-auto rounded-2xl bg-white shadow-card-hover md:grid-cols-2"
+            className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-card-hover"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -90,84 +92,114 @@ export function QuickViewModal({
               ✕
             </button>
 
-            <div className="relative aspect-[4/3] w-full bg-neutral-100 md:aspect-auto">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-              {product.badge && (
-                <div className="absolute left-4 top-4">
-                  <Badge tone="red">{product.badge}</Badge>
-                </div>
-              )}
-            </div>
-
-            <div className="flex flex-col p-6 md:p-8">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">
-                {product.category}
-              </p>
-              <h3 className="mb-3 font-heading text-2xl font-bold leading-tight">
-                {product.name}
-              </h3>
-
-              <div className="mb-3 flex items-center gap-2 text-sm">
-                <span className="text-red-500">★</span>
-                <span className="font-semibold text-neutral-800">
-                  {product.rating}
-                </span>
-                <span className="text-neutral-400">
-                  ({product.reviewCount} reviews)
-                </span>
-              </div>
-
-              <div className="mb-4 flex items-center gap-3">
-                <span className="text-xl font-bold text-red-500">
-                  ${product.price}
-                </span>
-                {product.compareAtPrice && (
-                  <span className="text-base text-neutral-400 line-through">
-                    ${product.compareAtPrice}
-                  </span>
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="relative w-full bg-neutral-100 p-6 md:p-8">
+                {product.badge && (
+                  <div className="absolute left-4 top-4 z-10">
+                    <Badge tone="red">{product.badge}</Badge>
+                  </div>
+                )}
+                {product.variants ? (
+                  <VariantGallery
+                    variants={product.variants}
+                    defaultSlug={
+                      product.defaultVariantSlug ?? product.variants[0].slug
+                    }
+                    productName={product.name}
+                  />
+                ) : (
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                 )}
               </div>
 
-              <p className="mb-5 leading-relaxed text-neutral-500">
-                {product.fullDescription ?? product.description}
-              </p>
+              <div className="flex flex-col p-6 md:p-8">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">
+                  {product.category}
+                </p>
+                <h3 className="mb-3 font-heading text-2xl font-bold leading-tight">
+                  {product.name}
+                </h3>
 
-              <ul className="mb-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm">
-                    <CheckIcon />
-                    <span className="text-neutral-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                <div className="mb-3 flex items-center gap-2 text-sm">
+                  <span className="text-red-500">★</span>
+                  <span className="font-semibold text-neutral-800">
+                    {product.rating}
+                  </span>
+                  <span className="text-neutral-400">
+                    ({product.reviewCount} reviews)
+                  </span>
+                </div>
 
-              <div className={cn("mt-auto flex flex-col gap-3 sm:flex-row")}>
-                <AddToCartButton />
-                <Button
-                  href="/contact"
-                  variant="secondary"
-                  className="w-full border-neutral-300 text-neutral-800 hover:bg-neutral-100 sm:w-auto"
-                >
-                  Book Consultation
-                </Button>
+                <div className="mb-1 flex items-center gap-3">
+                  <span className="text-xl font-bold text-red-500">
+                    ${product.price}
+                  </span>
+                  {product.compareAtPrice && (
+                    <span className="text-base text-neutral-400 line-through">
+                      ${product.compareAtPrice}
+                    </span>
+                  )}
+                </div>
+                {product.priceUnconfirmed && (
+                  <p className="mb-4 text-xs font-medium text-amber-600">
+                    ⚠ Placeholder price — to be confirmed with client before
+                    launch
+                  </p>
+                )}
+                {!product.priceUnconfirmed && <div className="mb-4" />}
+
+                <p className="mb-5 leading-relaxed text-neutral-500">
+                  {product.fullDescription ?? product.description}
+                </p>
+
+                <ul className="mb-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                  {product.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <CheckIcon />
+                      <span className="text-neutral-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className={cn("mt-auto flex flex-col gap-3 sm:flex-row")}>
+                  <AddToCartButton />
+                  <Button
+                    href="/contact"
+                    variant="secondary"
+                    className="w-full border-neutral-300 text-neutral-800 hover:bg-neutral-100 sm:w-auto"
+                  >
+                    Book Consultation
+                  </Button>
+                </div>
+
+                {product.detailHref && (
+                  <Link
+                    href={product.detailHref}
+                    onClick={onClose}
+                    className="mt-4 text-center text-sm font-semibold text-red-500 hover:text-red-600 sm:text-left"
+                  >
+                    See More Details →
+                  </Link>
+                )}
               </div>
-
-              {product.detailHref && (
-                <Link
-                  href={product.detailHref}
-                  onClick={onClose}
-                  className="mt-4 text-center text-sm font-semibold text-red-500 hover:text-red-600 sm:text-left"
-                >
-                  See More Details →
-                </Link>
-              )}
             </div>
+
+            {product.detailsGallery && (
+              <div className="border-t border-neutral-100 p-6 md:p-8">
+                <ProductDetailsGallery items={product.detailsGallery} />
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}

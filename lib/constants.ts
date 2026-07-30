@@ -2,6 +2,15 @@ import {
   PREMIUM_UNIVERSAL_SEAT_COVERS,
   getDefaultVariant,
 } from "@/lib/products/premium-universal-seat-covers";
+import {
+  DELUXE_SEAT_COVERS,
+  getDeluxeDefaultVariant,
+  type ColorVariant,
+} from "@/lib/products/deluxe-seat-covers";
+import {
+  CAR_AIR_FRESHENER,
+  getAirFreshenerDefaultVariant,
+} from "@/lib/products/car-air-freshener";
 
 export const SITE = {
   name: "Luxe Auto Accessories",
@@ -120,6 +129,13 @@ export type Product = {
   image: string;
   /** Only set for products with a full dedicated page (currently just the seat covers) */
   detailHref?: string;
+  /** True when price is a placeholder pending client confirmation */
+  priceUnconfirmed?: boolean;
+  /** When set, Quick View shows a full variant swatch + crossfade gallery instead of a single image */
+  variants?: ColorVariant[];
+  defaultVariantSlug?: string;
+  /** Extra captioned detail shots shown below the main Quick View content */
+  detailsGallery?: { image: string; caption: string }[];
 };
 
 export const CATEGORIES = [
@@ -131,6 +147,7 @@ export const CATEGORIES = [
   "Steering & Wheel Accessories",
   "Lighting",
   "Storage & Organization",
+  "Air Fresheners & Fragrance",
 ];
 
 export const PRODUCTS: Product[] = [
@@ -467,6 +484,40 @@ export const PRODUCTS: Product[] = [
     reviewCount: 26,
     image:
       "https://images.unsplash.com/photo-1683027908780-4fbd958ee580?w=800&q=80",
+  },
+  {
+    slug: DELUXE_SEAT_COVERS.slug,
+    name: DELUXE_SEAT_COVERS.name,
+    category: DELUXE_SEAT_COVERS.category,
+    price: DELUXE_SEAT_COVERS.price,
+    compareAtPrice: DELUXE_SEAT_COVERS.compareAtPrice,
+    priceUnconfirmed: DELUXE_SEAT_COVERS.priceUnconfirmed,
+    badge: DELUXE_SEAT_COVERS.badge,
+    description: DELUXE_SEAT_COVERS.shortDescription,
+    fullDescription: DELUXE_SEAT_COVERS.fullDescription,
+    features: DELUXE_SEAT_COVERS.features,
+    rating: 4.6,
+    reviewCount: 33,
+    image: getDeluxeDefaultVariant().images[0],
+    variants: DELUXE_SEAT_COVERS.variants,
+    defaultVariantSlug: DELUXE_SEAT_COVERS.defaultVariant,
+    detailsGallery: DELUXE_SEAT_COVERS.detailsGallery,
+  },
+  {
+    slug: CAR_AIR_FRESHENER.slug,
+    name: CAR_AIR_FRESHENER.name,
+    category: CAR_AIR_FRESHENER.category,
+    price: CAR_AIR_FRESHENER.price,
+    compareAtPrice: CAR_AIR_FRESHENER.compareAtPrice,
+    priceUnconfirmed: CAR_AIR_FRESHENER.priceUnconfirmed,
+    description: CAR_AIR_FRESHENER.shortDescription,
+    fullDescription: CAR_AIR_FRESHENER.fullDescription,
+    features: CAR_AIR_FRESHENER.features,
+    rating: 4.5,
+    reviewCount: 14,
+    image: getAirFreshenerDefaultVariant().images[0],
+    variants: CAR_AIR_FRESHENER.variants,
+    defaultVariantSlug: CAR_AIR_FRESHENER.defaultVariant,
   },
 ];
 
