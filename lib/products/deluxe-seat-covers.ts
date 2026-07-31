@@ -138,6 +138,10 @@ export const DELUXE_SEAT_COVERS = {
   // to any single color.
   detailsGallery: [
     {
+      image: `${base}/details/color-options-overview.jpg`,
+      caption: "All 12 color options",
+    },
+    {
       image: `${base}/details/headrest-detail.jpg`,
       caption: "Included headrest cover",
     },

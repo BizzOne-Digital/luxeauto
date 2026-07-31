@@ -10,15 +10,15 @@ export function ProductDetailsGallery({
       <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">
         Product Details
       </p>
-      <div className="scrollbar-none flex gap-4 overflow-x-auto pb-1">
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5">
         {items.map((item, i) => (
-          <div key={i} className="w-32 shrink-0">
+          <div key={i}>
             <div className="relative mb-2 aspect-square w-full overflow-hidden rounded-xl bg-neutral-100">
               <Image
                 src={item.image}
                 alt={item.caption}
                 fill
-                sizes="128px"
+                sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
                 className="object-cover"
               />
             </div>
