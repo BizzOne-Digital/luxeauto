@@ -25,18 +25,12 @@ function CheckIcon() {
 export function ProductInfo({
   category,
   name,
-  price,
-  compareAtPrice,
-  priceUnconfirmed,
   badge,
   description,
   features,
 }: {
   category: string;
   name: string;
-  price: number;
-  compareAtPrice?: number;
-  priceUnconfirmed?: boolean;
   badge?: string;
   description: string;
   features: string[];
@@ -52,21 +46,6 @@ export function ProductInfo({
         </h1>
         {badge && <Badge tone="red">{badge}</Badge>}
       </div>
-
-      <div className="mb-2 flex items-center gap-3">
-        <span className="text-2xl font-bold text-red-500">${price}</span>
-        {compareAtPrice && (
-          <span className="text-lg text-neutral-400 line-through">
-            ${compareAtPrice}
-          </span>
-        )}
-      </div>
-      {priceUnconfirmed && (
-        <p className="mb-6 text-sm font-medium text-amber-600">
-          ⚠ Placeholder price — to be confirmed with client before launch
-        </p>
-      )}
-      {!priceUnconfirmed && <div className="mb-6" />}
 
       <Body muted>{description}</Body>
 

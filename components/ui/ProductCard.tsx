@@ -32,19 +32,9 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="mb-2 text-xs uppercase tracking-widest text-neutral-400">
           {product.category}
         </p>
-        <h3 className="mb-3 font-heading text-lg font-semibold leading-snug">
+        <h3 className="font-heading text-lg font-semibold leading-snug">
           {product.name}
         </h3>
-        <div className="flex items-center gap-3">
-          <span className="text-lg font-bold text-red-500">
-            ${product.price}
-          </span>
-          {product.compareAtPrice && (
-            <span className="text-sm text-neutral-400 line-through">
-              ${product.compareAtPrice}
-            </span>
-          )}
-        </div>
       </div>
     </button>
   );

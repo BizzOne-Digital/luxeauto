@@ -138,24 +138,6 @@ export function QuickViewModal({
                   </span>
                 </div>
 
-                <div className="mb-1 flex items-center gap-3">
-                  <span className="text-xl font-bold text-red-500">
-                    ${product.price}
-                  </span>
-                  {product.compareAtPrice && (
-                    <span className="text-base text-neutral-400 line-through">
-                      ${product.compareAtPrice}
-                    </span>
-                  )}
-                </div>
-                {product.priceUnconfirmed && (
-                  <p className="mb-4 text-xs font-medium text-amber-600">
-                    ⚠ Placeholder price — to be confirmed with client before
-                    launch
-                  </p>
-                )}
-                {!product.priceUnconfirmed && <div className="mb-4" />}
-
                 <p className="mb-5 leading-relaxed text-neutral-500">
                   {product.fullDescription ?? product.description}
                 </p>

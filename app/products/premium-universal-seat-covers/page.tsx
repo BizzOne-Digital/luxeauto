@@ -40,9 +40,6 @@ export default function PremiumUniversalSeatCoversPage() {
           <ProductInfo
             category={product.category}
             name={product.name}
-            price={product.price}
-            compareAtPrice={product.compareAtPrice}
-            priceUnconfirmed={product.priceUnconfirmed}
             badge={product.badge}
             description={product.fullDescription}
             features={product.features}
