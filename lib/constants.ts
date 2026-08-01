@@ -15,9 +15,9 @@ import {
 export const SITE = {
   name: "Luxe Auto Accessories",
   tagline: "Passion for Cars. Commitment to Quality.",
-  phone: "+61 2 9724 5555",
-  email: "info@luxeautoaccessories.com.au",
-  address: "Fairfield, NSW, Australia",
+  phone: "+1 437-265-9090",
+  email: "info@luxeautoaccessories.com",
+  address: "96 Planchet Rd, Vaughan, ON L4K 2C7, Canada",
   hours: [
     { days: "Mon–Fri", time: "8:00am – 6:00pm" },
     { days: "Sat", time: "9:00am – 4:00pm" },
@@ -36,28 +36,32 @@ export const NAV_LINKS = [
 
 export const STATS = [
   {
-    value: 8,
-    suffix: "+",
-    label: "Years Experience",
-    description: "Serving Western Sydney drivers since 2016.",
+    value: 100,
+    suffix: "%",
+    label: "Quality Products",
+    description:
+      "Premium automotive accessories sourced from trusted manufacturers.",
   },
   {
-    value: 3200,
-    suffix: "+",
-    label: "Cars Serviced",
-    description: "Trusted by thousands of satisfied customers.",
+    value: 100,
+    suffix: "%",
+    label: "Professional Installation",
+    description:
+      "Expert installation services completed with precision and care.",
   },
   {
-    value: 500,
-    suffix: "+",
-    label: "Products In Stock",
-    description: "Hand-picked from leading global manufacturers.",
+    value: 100,
+    suffix: "%",
+    label: "Customer Satisfaction",
+    description:
+      "Dedicated to providing exceptional service from consultation to installation.",
   },
   {
-    value: 4.8,
-    suffix: "★",
-    label: "Average Rating",
-    description: "Based on 127 verified customer reviews.",
+    value: 7,
+    suffix: " Days",
+    label: "Open Every Week",
+    description:
+      "Serving customers Monday through Sunday for your convenience.",
   },
 ];
 

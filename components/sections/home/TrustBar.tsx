@@ -19,19 +19,15 @@ export function TrustBar() {
         >
           <Eyebrow>Why Drivers Choose Us</Eyebrow>
           <H2 className="mb-6">
-            Trusted by Western Sydney&apos;s Most Discerning Drivers
+            Trusted by Drivers Across Vaughan and the Greater Toronto Area
           </H2>
           <Body muted>
-            Since 2016, we&apos;ve built our reputation one installation at a
-            time. Every product we stock has been personally tested and approved
-            by our team before it ever reaches our shelves, and every install is
-            carried out by technicians who treat your car the way they&apos;d
-            treat their own.
+            At Luxe Auto Accessories, we're passionate about helping drivers enhance the style, comfort, and functionality of their vehicles. We carefully select premium automotive accessories that combine quality, durability, and performance, while our experienced team ensures every installation is completed with precision and attention to detail.
+
+Whether you're upgrading your interior, adding exterior styling, or installing custom accessories, we're committed to delivering exceptional service and workmanship. Our goal is to provide every customer with reliable products, honest advice, and a professional experience that keeps them coming back for future upgrades.
           </Body>
           <Body muted className="mb-0">
-            That approach has earned us a 4.8-star average across 127 reviews,
-            and a customer base that keeps coming back — not just for their next
-            accessory, but to send friends and family our way too.
+            That commitment to quality has earned us the trust of drivers throughout Vaughan and the Greater Toronto Area, with hundreds of satisfied customers choosing Luxe Auto Accessories for premium products and professional installations.
           </Body>
         </motion.div>
 
