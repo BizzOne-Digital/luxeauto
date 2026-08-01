@@ -19,16 +19,30 @@ export function TrustBar() {
         >
           <Eyebrow>Why Drivers Choose Us</Eyebrow>
           <H2 className="mb-6">
-            Trusted by Drivers Across Vaughan and the Greater Toronto Area
-          </H2>
-          <Body muted>
-            At Luxe Auto Accessories, we're passionate about helping drivers enhance the style, comfort, and functionality of their vehicles. We carefully select premium automotive accessories that combine quality, durability, and performance, while our experienced team ensures every installation is completed with precision and attention to detail.
+  Trusted by Drivers Across Vaughan and the Greater Toronto Area
+</H2>
 
-Whether you're upgrading your interior, adding exterior styling, or installing custom accessories, we're committed to delivering exceptional service and workmanship. Our goal is to provide every customer with reliable products, honest advice, and a professional experience that keeps them coming back for future upgrades.
-          </Body>
-          <Body muted className="mb-0">
-            That commitment to quality has earned us the trust of drivers throughout Vaughan and the Greater Toronto Area, with hundreds of satisfied customers choosing Luxe Auto Accessories for premium products and professional installations.
-          </Body>
+<Body muted>
+  At Luxe Auto Accessories, we&apos;re passionate about helping drivers enhance
+  the style, comfort, and functionality of their vehicles. We carefully select
+  premium automotive accessories that combine quality, durability, and
+  performance, while our experienced team ensures every installation is
+  completed with precision and attention to detail.
+  <br />
+  <br />
+  Whether you&apos;re upgrading your interior, adding exterior styling, or
+  installing custom accessories, we&apos;re committed to delivering exceptional
+  service and workmanship. Our goal is to provide every customer with reliable
+  products, honest advice, and a professional experience that keeps them coming
+  back for future upgrades.
+</Body>
+
+<Body muted className="mb-0">
+  That commitment to quality has earned us the trust of drivers throughout
+  Vaughan and the Greater Toronto Area, with hundreds of satisfied customers
+  choosing Luxe Auto Accessories for premium products and professional
+  installations.
+</Body>
         </motion.div>
 
         <div className="relative hidden lg:col-span-1 lg:block">
