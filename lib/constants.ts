@@ -265,6 +265,16 @@ export const PRODUCTS: Product[] = [
       "/images/products/window-visors/window-trim-view.jpg",
       "/images/products/window-visors/pillar-mount-arrows.jpg",
     ],
+    detailsGallery: [
+      {
+        image: "/images/products/window-visors/why-install-benefits.jpg",
+        caption: "Air circulation, rainproof venting, anti-fog, and sun shade",
+      },
+      {
+        image: "/images/products/window-visors/pillar-trim-closeup.jpg",
+        caption: "Clean pillar-mount trim fit",
+      },
+    ],
   },
   {
     slug: "premium-car-cover",
@@ -570,6 +580,57 @@ export const PRODUCTS: Product[] = [
         caption: "GPS tracking and cross-platform playback",
       },
     ],
+    detailHref: "/products/smart-dash-cam-system",
+  },
+  {
+    slug: "mirror-dash-cam-3-channel",
+    name: "4K Mirror Dash Cam System (3-Channel)",
+    category: "Electronics",
+    price: 269,
+    badge: "NEW",
+    description:
+      "A 4K mirror-mount dash cam that replaces your rearview mirror with a 3-channel front, rear, and cabin recording system.",
+    fullDescription:
+      "This mirror dash cam mounts directly over your existing rearview mirror, replacing the view with a wide touchscreen display while recording front, rear, and cabin footage simultaneously. Built for durability with an upgraded super capacitor for stable performance in extreme heat and cold, it includes GPS tracking, loop recording with G-sensor event locking, and enhanced night vision for clear footage day or night.",
+    features: [
+      "3-channel: front, rear & cabin recording",
+      "4K UHD front camera",
+      "Mirror-mount touchscreen display",
+      "GPS tracking with route playback",
+      "Super night vision (WDR)",
+      "Loop recording & G-sensor",
+      "Upgraded super capacitor (heat & cold resistant)",
+      "Mobile app connectivity",
+    ],
+    rating: 4.5,
+    reviewCount: 9,
+    image: "/images/products/mirror-dash-cam/hero-mirror-cam-gps.jpg",
+    gallery: [
+      "/images/products/mirror-dash-cam/4k-uhd-banner.jpg",
+      "/images/products/mirror-dash-cam/3-channel-desert-scene.jpg",
+    ],
+    detailsGallery: [
+      {
+        image: "/images/products/mirror-dash-cam/super-night-vision.jpg",
+        caption: "Super night vision with WDR",
+      },
+      {
+        image: "/images/products/mirror-dash-cam/gps-tracking-playback.jpg",
+        caption: "GPS tracking and route playback",
+      },
+      {
+        image: "/images/products/mirror-dash-cam/loop-recording-g-sensor.jpg",
+        caption: "Loop recording with G-sensor event locking",
+      },
+      {
+        image: "/images/products/mirror-dash-cam/whats-in-the-box.jpg",
+        caption: "What's in the box",
+      },
+      {
+        image: "/images/products/mirror-dash-cam/upgraded-super-capacitor.jpg",
+        caption: "Upgraded super capacitor for extreme heat & cold",
+      },
+    ],
   },
   {
     slug: "hard-folding-tonneau-cover",
@@ -607,6 +668,10 @@ export const PRODUCTS: Product[] = [
       {
         image: "/images/products/tonneau-cover/confirm-size-2.jpg",
         caption: "Confirm your bed size before ordering",
+      },
+      {
+        image: "/images/products/tonneau-cover/confirm-size-3.jpg",
+        caption: "Measure your bed length before ordering",
       },
     ],
   },
@@ -651,6 +716,51 @@ export const PRODUCTS: Product[] = [
         caption: "Refresh the look of your interior",
       },
     ],
+  },
+];
+
+// Full detail set for the dedicated Smart Dash Cam System page — Quick View
+// only shows a short curated set (see PRODUCTS above); the full page shows everything.
+export const SMART_DASH_CAM_DETAILS: { image: string; caption: string }[] = [
+  {
+    image: "/images/products/dash-cam/installation-suction-typec.jpg",
+    caption: "Easy installation with suction mount and Type-C power",
+  },
+  {
+    image: "/images/products/dash-cam/night-vision-loop-recording.jpg",
+    caption: "Night vision and loop recording",
+  },
+  {
+    image: "/images/products/dash-cam/gps-cross-platform-playback.jpg",
+    caption: "GPS tracking and cross-platform playback",
+  },
+  {
+    image: "/images/products/dash-cam/whats-in-the-box.jpg",
+    caption: "What's in the box",
+  },
+  {
+    image: "/images/products/dash-cam/4-channel-rideshare-recording.jpg",
+    caption: "4-channel recording, ideal for rideshare drivers",
+  },
+  {
+    image: "/images/products/dash-cam/24h-parking-monitor.jpg",
+    caption: "24H parking monitor with impact detection",
+  },
+  {
+    image: "/images/products/dash-cam/multi-angle-ir-cabin-camera.jpg",
+    caption: "Multi-angle IR cabin camera",
+  },
+  {
+    image: "/images/products/dash-cam/detachable-design-typec.jpg",
+    caption: "Detachable design with upgraded Type-C interface",
+  },
+  {
+    image: "/images/products/dash-cam/low-voltage-protection.jpg",
+    caption: "Adjustable low voltage protection",
+  },
+  {
+    image: "/images/products/dash-cam/2-5k-clarity-comparison.jpg",
+    caption: "2.5K clarity reveals the details others miss",
   },
 ];
 
