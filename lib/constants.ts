@@ -138,6 +138,8 @@ export type Product = {
   /** When set, Quick View shows a full variant swatch + crossfade gallery instead of a single image */
   variants?: ColorVariant[];
   defaultVariantSlug?: string;
+  /** Additional main-gallery images (no color variants) shown alongside `image` as a thumbnail-swappable gallery */
+  gallery?: string[];
   /** Extra captioned detail shots shown below the main Quick View content */
   detailsGallery?: { image: string; caption: string }[];
 };
@@ -174,8 +176,7 @@ export const PRODUCTS: Product[] = [
     ],
     rating: 4.7,
     reviewCount: 42,
-    image:
-      "https://images.unsplash.com/photo-1633078674059-35d72a5bd19a?w=800&q=80",
+    image: "/images/products/steering-wheel-cover/color-options.jpg",
   },
   {
     slug: "console-organizer",
@@ -258,8 +259,12 @@ export const PRODUCTS: Product[] = [
     ],
     rating: 4.6,
     reviewCount: 31,
-    image:
-      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80",
+    image: "/images/products/window-visors/airflow-diagram.jpg",
+    gallery: [
+      "/images/products/window-visors/fitment-detail.jpg",
+      "/images/products/window-visors/window-trim-view.jpg",
+      "/images/products/window-visors/pillar-mount-arrows.jpg",
+    ],
   },
   {
     slug: "premium-car-cover",
@@ -522,6 +527,130 @@ export const PRODUCTS: Product[] = [
     image: getAirFreshenerDefaultVariant().images[0],
     variants: CAR_AIR_FRESHENER.variants,
     defaultVariantSlug: CAR_AIR_FRESHENER.defaultVariant,
+  },
+  {
+    slug: "smart-dash-cam-system",
+    name: "Smart Dash Cam System (4CH with Rear View Camera)",
+    category: "Electronics",
+    price: 249,
+    badge: "PROFESSIONAL",
+    description:
+      "A 4-channel smart dash cam system with front and rear coverage, night vision, GPS tracking, and touch screen control.",
+    fullDescription:
+      "This smart dash cam system delivers comprehensive front and rear coverage with a high-performance STARVIS 2 sensor for sharp footage in any lighting condition. Featuring a responsive touch screen display, voice control, GPS tracking, and loop recording, it pairs with a mobile app for easy playback and footage management. Includes 128GB of onboard storage and simple installation with a suction cup mount and Type-C power input.",
+    features: [
+      "128GB memory card included",
+      "STARVIS 2 image sensor",
+      "Touch screen & voice control",
+      "Front and rear camera coverage",
+      "GPS tracking",
+      "Night vision recording",
+      "Loop recording",
+      "Mobile app playback (iOS/Android)",
+      "PC/macOS video playback support",
+    ],
+    rating: 4.7,
+    reviewCount: 36,
+    image: "/images/products/dash-cam/hero-128gb-starvis2.jpg",
+    gallery: [
+      "/images/products/dash-cam/touchscreen-voice-control.jpg",
+      "/images/products/dash-cam/dashboard-rearview-display.jpg",
+    ],
+    detailsGallery: [
+      {
+        image: "/images/products/dash-cam/installation-suction-typec.jpg",
+        caption: "Easy installation with suction mount and Type-C power",
+      },
+      {
+        image: "/images/products/dash-cam/night-vision-loop-recording.jpg",
+        caption: "Night vision and loop recording",
+      },
+      {
+        image: "/images/products/dash-cam/gps-cross-platform-playback.jpg",
+        caption: "GPS tracking and cross-platform playback",
+      },
+    ],
+  },
+  {
+    slug: "hard-folding-tonneau-cover",
+    name: "Hard Folding Tonneau Cover",
+    category: "Exterior Accessories",
+    price: 549,
+    description:
+      "A durable tri-fold hard tonneau cover with a matte finish that protects your truck bed while giving full access when you need it.",
+    fullDescription:
+      "This hard folding tonneau cover combines a rugged matte-black finish with all-weather protection for your truck bed. The tri-fold hard panel design gives you full bed access in seconds, while the low-profile styling keeps your truck looking sharp on and off the road.",
+    features: [
+      "Matte black finish",
+      "Full bed access",
+      "All-weather protection",
+      "Tri-fold hard panel design",
+      "Secure locking mechanism",
+      "Fits most full-size trucks",
+    ],
+    rating: 4.6,
+    reviewCount: 21,
+    image: "/images/products/tonneau-cover/hero-f150.jpg",
+    gallery: [
+      "/images/products/tonneau-cover/hero-offroad.jpg",
+      "/images/products/tonneau-cover/feature-icons.jpg",
+    ],
+    detailsGallery: [
+      {
+        image: "/images/products/tonneau-cover/space-utilization.jpg",
+        caption: "Locked, partially folded, or fully folded for flexible access",
+      },
+      {
+        image: "/images/products/tonneau-cover/confirm-size-1.jpg",
+        caption: "Confirm your bed size before ordering",
+      },
+      {
+        image: "/images/products/tonneau-cover/confirm-size-2.jpg",
+        caption: "Confirm your bed size before ordering",
+      },
+    ],
+  },
+  {
+    slug: "all-weather-tpe-floor-mats",
+    name: "All-Weather TPE Floor Mats (Custom-Fit)",
+    category: "Exterior Accessories",
+    price: 179,
+    description:
+      "Laser-scanned custom-fit TPE floor mats with deep ridges and edge-to-edge coverage to trap mud, slush, and spills.",
+    fullDescription:
+      "Precision laser-scanned for a true custom fit, these TPE floor mats feature deep ridges and grooves that trap mud, slush, and debris before it reaches your carpet. Built from eco-friendly, heavy-duty TPE material that resists heat, cracking, and wear from -60°C to 150°C, with raised edges for full edge-to-edge coverage.",
+    features: [
+      "Laser-scanned custom fit",
+      "Eco-friendly TPE material",
+      "Waterproof & easy to clean",
+      "Heavy-duty & anti-slip",
+      "Heat & crack resistant (-60°C to 150°C)",
+      "Edge-to-edge coverage",
+      "High ridges trap mud & debris",
+      "Scratch-proof surface",
+    ],
+    rating: 4.6,
+    reviewCount: 18,
+    image: "/images/products/floor-mats-tpe/hero-rav4-set.jpg",
+    gallery: ["/images/products/floor-mats-tpe/wear-resistant.jpg"],
+    detailsGallery: [
+      {
+        image: "/images/products/floor-mats-tpe/waterproof-test.jpg",
+        caption: "Waterproof and easy to clean",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/high-ridges-grooves.jpg",
+        caption: "High ridges capture mud, slush, and debris",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/all-season-durability.jpg",
+        caption: "All-season durability in extreme weather",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/before-after.jpg",
+        caption: "Refresh the look of your interior",
+      },
+    ],
   },
 ];
 

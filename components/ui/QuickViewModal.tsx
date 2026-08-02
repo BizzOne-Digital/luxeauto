@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { VariantGallery } from "@/components/sections/product-detail/VariantGallery";
 import { ProductDetailsGallery } from "@/components/ui/ProductDetailsGallery";
+import { SimpleGallery } from "@/components/ui/SimpleGallery";
 import type { Product } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -106,6 +107,11 @@ export function QuickViewModal({
                       product.defaultVariantSlug ?? product.variants[0].slug
                     }
                     productName={product.name}
+                  />
+                ) : product.gallery ? (
+                  <SimpleGallery
+                    images={[product.image, ...product.gallery]}
+                    alt={product.name}
                   />
                 ) : (
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
