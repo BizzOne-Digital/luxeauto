@@ -19,7 +19,7 @@ export function TrustBar() {
         >
           <Eyebrow>Why Drivers Choose Us</Eyebrow>
           <H2 className="mb-6">
-  Trusted by Drivers Across Vaughan and the Greater Toronto Area
+  Trusted by Drivers Across Mississauga and the Greater Toronto Area
 </H2>
 
 <Body muted>
@@ -39,7 +39,7 @@ export function TrustBar() {
 
 <Body muted className="mb-0">
   That commitment to quality has earned us the trust of drivers throughout
-  Vaughan and the Greater Toronto Area, with hundreds of satisfied customers
+  Mississauga and the Greater Toronto Area, with hundreds of satisfied customers
   choosing Luxe Auto Accessories for premium products and professional
   installations.
 </Body>
@@ -49,7 +49,7 @@ export function TrustBar() {
           <div className="absolute inset-y-0 left-1/2 w-px bg-neutral-200" />
         </div>
 
-        <div className="grid grid-cols-2 gap-6 md:gap-8 lg:col-span-6">
+        <div className="grid grid-cols-2 gap-6 self-center md:gap-8 lg:col-span-6">
           {STATS.map((stat, i) => (
             <motion.div
               key={stat.label}

@@ -22,13 +22,13 @@ export function OurJourney() {
           <Body muted>
             Luxe Auto Accessories was founded in 2016 by a team of passionate
             automotive enthusiasts who saw a gap in the market for a truly
-            premium accessories experience in Western Sydney. We believed that
-            drivers deserved better — better products, better advice, and better
-            installation.
+            premium accessories experience in the Greater Toronto Area. We
+            believed that drivers deserved better — better products, better
+            advice, and better installation.
           </Body>
           <Body muted>
-            What started as a small showroom in Fairfield quickly grew into one
-            of the region&apos;s most respected automotive accessories
+            What started as a small workshop in Mississauga quickly grew into
+            one of the region&apos;s most respected automotive accessories
             businesses. Word spread fast: if you wanted quality, you came to
             Luxe Auto.
           </Body>

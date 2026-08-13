@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FOOTER_LINKS, SITE } from "@/lib/constants";
+import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function Footer() {
   return (
@@ -19,13 +20,14 @@ export function Footer() {
               Premium automotive accessories and professional installation.
               Transform your car with quality products and expert craftsmanship.
             </p>
-            <p className="text-sm leading-relaxed text-neutral-500">
+            <p className="mb-6 text-sm leading-relaxed text-neutral-500">
               {SITE.address}
               <br />
               {SITE.phone}
               <br />
               {SITE.email}
             </p>
+            <SocialIcons />
           </div>
 
           <div className="md:col-span-2 md:col-start-6">

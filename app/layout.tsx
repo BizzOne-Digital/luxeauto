@@ -20,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Luxe Auto Accessories | Premium Auto Accessories Sydney",
+  title: "Luxe Auto Accessories | Premium Auto Accessories Ontario",
   description:
-    "Western Sydney's most trusted automotive accessories destination. Premium styling, protection, and customisation with expert installation and a 12-month workmanship warranty.",
+    "The Greater Toronto Area's most trusted automotive accessories destination. Premium styling, protection, and customisation with expert installation and a 12-month workmanship warranty.",
 };
 
 export default function RootLayout({

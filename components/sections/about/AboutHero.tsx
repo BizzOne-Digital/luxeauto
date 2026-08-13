@@ -41,8 +41,8 @@ export function AboutHero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="max-w-xl text-lg leading-relaxed text-neutral-300"
           >
-            From a small Fairfield workshop to Western Sydney&apos;s most
-            trusted automotive accessories destination — our journey has been
+            From a small Mississauga workshop to the Greater Toronto
+            Area&apos;s most trusted automotive accessories destination — our journey has been
             driven by one passion: making every car the best version of itself.
           </motion.p>
         </div>

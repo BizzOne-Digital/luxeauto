@@ -59,7 +59,7 @@ export function ContactInfo() {
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-neutral-200 shadow-card">
         <iframe
           title="Luxe Auto Accessories location map"
-          src="https://www.google.com/maps?q=Fairfield,NSW,Australia&output=embed"
+          src={`https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}&output=embed`}
           className="h-full w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

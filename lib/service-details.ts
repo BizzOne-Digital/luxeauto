@@ -66,8 +66,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ],
     related: [
       "car-customization",
+      "paint-protection-film",
       "window-visor-rain-guard-installation",
-      "installation-services",
     ],
   },
 
@@ -175,8 +175,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ],
     related: [
       "seat-cover-installation",
+      "dash-cam-installation",
       "car-mats-trunk-liner-installation",
-      "window-visor-rain-guard-installation",
     ],
   },
 
@@ -344,6 +344,291 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       "car-mats-trunk-liner-installation",
       "vehicle-styling",
       "installation-services",
+    ],
+  },
+
+  "tire-change-service": {
+    slug: "tire-change-service",
+    name: "Tire Change Service",
+    heroSubline:
+      "Fast, professional tire changes and rotations — most vehicles done in under 30 minutes.",
+    heroImage:
+      "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?w=1600&q=80",
+    whatIsIt: {
+      image:
+        "https://images.unsplash.com/photo-1753030148904-16130157a3e5?w=900&q=80",
+      paragraphs: [
+        "Whether you're swapping to winter tires, replacing a worn set, or just need a rotation to even out tread wear, our tire change service gets you back on the road quickly without cutting corners on safety.",
+        "Every change includes proper torque-spec wheel fitting, a visual inspection of tread depth and sidewall condition, and a check of your spare if equipped. We'll flag anything that needs attention before it becomes a problem — nail punctures, uneven wear patterns, or a tire nearing the end of its life.",
+        "We work with most passenger, SUV, and light truck tire sizes, and can source and fit new tires on request if your current set needs replacing rather than just swapping.",
+      ],
+    },
+    quickFacts: [
+      "Most tire changes completed in under 30 minutes",
+      "Torque-spec wheel fitting on every vehicle",
+      "Free visual tread and sidewall inspection included",
+      "Seasonal tire swap and storage advice available",
+      "Walk-ins welcome, or book ahead for a guaranteed slot",
+    ],
+    howItWorks: [
+      {
+        title: "Check-In",
+        description:
+          "Tell us what you need — a swap, rotation, or new tire fitting — and we'll confirm timing.",
+      },
+      {
+        title: "Inspection",
+        description:
+          "We check tread depth, sidewall condition, and wheel hardware before starting.",
+      },
+      {
+        title: "Change & Torque",
+        description:
+          "Tires are changed and wheels torqued to manufacturer spec.",
+      },
+      {
+        title: "Final Check",
+        description:
+          "Pressure set correctly across all four tires before you drive away.",
+      },
+    ],
+    signs: [
+      "It's time to swap between summer and winter tires",
+      "Your tread is wearing unevenly or looking thin",
+      "You've picked up a slow leak or sidewall damage",
+      "You just bought new tires and need them professionally fitted",
+    ],
+    related: [
+      "installation-services",
+      "car-mats-trunk-liner-installation",
+      "vehicle-styling",
+    ],
+  },
+
+  "dash-cam-installation": {
+    slug: "dash-cam-installation",
+    name: "Dash Cam Installation",
+    heroSubline:
+      "Clean, hardwired dash cam installs with no visible cabling.",
+    heroImage: "/images/products/dash-cam/installation-suction-typec.jpg",
+    whatIsIt: {
+      image: "/images/products/dash-cam/hero-128gb-starvis2.jpg",
+      paragraphs: [
+        "A dash cam is only as good as its installation. A cable running loose across your dashboard or a crooked mount undermines an otherwise great setup — our installers route every wire through the headliner and pillar trim so nothing is visible once the job is done.",
+        "We install front-only, front-and-rear, and mirror-style multi-channel systems, including hardwiring to a fuse tap or dedicated hardwire kit for always-on parking mode recording. Every install is tested for footage quality, night vision, and correct time/date sync before handover.",
+        "Already own a dash cam? We're happy to professionally install a unit you've purchased elsewhere, not just ones bought from us.",
+      ],
+    },
+    quickFacts: [
+      "Hidden wiring through headliner and pillar trim",
+      "Front-only, front-and-rear, and mirror-style systems supported",
+      "Hardwire kit installation for parking mode recording",
+      "Installs customer-supplied dash cams, not just ours",
+      "Footage and night vision tested before handover",
+    ],
+    howItWorks: [
+      {
+        title: "System Selection",
+        description:
+          "Choose a dash cam from us, or bring your own unit to install.",
+      },
+      {
+        title: "Mounting & Routing",
+        description:
+          "Camera mounted and cabling routed invisibly through trim panels.",
+      },
+      {
+        title: "Power Connection",
+        description:
+          "Hardwired to a fuse tap or dedicated kit for parking mode, or a simple 12V plug for basic use.",
+      },
+      {
+        title: "Footage Test",
+        description:
+          "Recording, night vision, and time sync confirmed before you leave.",
+      },
+    ],
+    signs: [
+      "You've bought a dash cam but don't want a messy cable across your windshield",
+      "You want parking mode recording, which needs a hardwired power source",
+      "A previous dash cam install looks unfinished or is already coming loose",
+      "You're installing a multi-channel or mirror-style system with more complex wiring",
+    ],
+    related: [
+      "installation-services",
+      "window-tinting",
+      "interior-lighting-installation",
+    ],
+  },
+
+  "window-tinting": {
+    slug: "window-tinting",
+    name: "Window Tinting",
+    heroSubline:
+      "Bubble-free, legally compliant tint for heat, privacy, and UV protection.",
+    heroImage:
+      "https://images.unsplash.com/photo-1761123090853-9262493448c4?w=1600&q=80",
+    whatIsIt: {
+      image:
+        "https://images.unsplash.com/photo-1745946645137-66cfb274ee7d?w=900&q=80",
+      paragraphs: [
+        "Window tinting isn't just about looks — a quality tint film blocks a significant amount of heat and harmful UV rays, keeps your interior cooler, and adds a layer of privacy and shatter resistance to your glass.",
+        "We use professional-grade film applied by hand, panel by panel, for a bubble-free, edge-to-edge finish. Every job is completed to a shade level that's legally compliant for your province — we'll walk you through the options and won't apply anything that would leave you non-compliant on the road.",
+        "Tint is available for side windows, rear windows, and windshields (where legally permitted), with a range of shade percentages depending on how much heat and privacy you're after.",
+      ],
+    },
+    quickFacts: [
+      "Professional-grade film, applied bubble-free by hand",
+      "Legally compliant shade levels for your province",
+      "Blocks significant heat and harmful UV rays",
+      "Adds privacy and glass shatter resistance",
+      "Most vehicles completed within a few hours",
+    ],
+    howItWorks: [
+      {
+        title: "Shade Consultation",
+        description:
+          "We discuss heat, privacy, and legal shade options for your vehicle.",
+      },
+      {
+        title: "Glass Prep",
+        description: "Windows thoroughly cleaned to ensure a clean bond.",
+      },
+      {
+        title: "Film Application",
+        description:
+          "Film is cut, applied, and smoothed panel by panel for a bubble-free finish.",
+      },
+      {
+        title: "Cure Instructions",
+        description:
+          "We walk you through the short curing period before rolling windows down.",
+      },
+    ],
+    signs: [
+      "Your cabin gets uncomfortably hot in direct sun",
+      "You want more privacy without going against local tint laws",
+      "Your factory tint is bubbling, peeling, or purple with age",
+      "You're preparing a vehicle for resale and want it looking sharp",
+    ],
+    related: [
+      "paint-protection-film",
+      "vehicle-styling",
+      "dash-cam-installation",
+    ],
+  },
+
+  "paint-protection-film": {
+    slug: "paint-protection-film",
+    name: "Paint Protection Film (PPF)",
+    heroSubline:
+      "Invisible, self-healing film that shields your paint from chips and scratches.",
+    heroImage:
+      "https://images.unsplash.com/photo-1679897422600-dbcc37196105?w=1600&q=80",
+    whatIsIt: {
+      image:
+        "https://images.unsplash.com/photo-1688385274100-b1e2aefb51de?w=900&q=80",
+      paragraphs: [
+        "Paint protection film is a clear, self-healing polyurethane layer applied directly over your factory paint. It absorbs the impact of stone chips, road debris, and minor scratches that would otherwise damage the clear coat — all while staying virtually invisible.",
+        "We offer partial coverage (high-impact zones like the front bumper, hood edge, mirrors, and door edges) or full-panel coverage depending on how much protection you want. Self-healing film means light swirl marks and fine scratches disappear on their own with heat from the sun or warm water.",
+        "PPF is applied by hand over precisely cut panel templates, with every edge sealed cleanly so it doesn't lift or yellow over time.",
+      ],
+    },
+    quickFacts: [
+      "Self-healing film — light scratches disappear with heat",
+      "Partial (high-impact zone) or full-panel coverage available",
+      "Virtually invisible once applied",
+      "Precisely cut panel templates for a clean edge finish",
+      "Protects your factory clear coat and resale value",
+    ],
+    howItWorks: [
+      {
+        title: "Coverage Consultation",
+        description:
+          "Decide between high-impact zone protection or full-panel coverage.",
+      },
+      {
+        title: "Surface Prep",
+        description: "Paint is decontaminated and prepped for a clean bond.",
+      },
+      {
+        title: "Film Application",
+        description:
+          "Pre-cut panel film applied by hand and squeegeed for a seamless finish.",
+      },
+      {
+        title: "Edge Seal & Inspection",
+        description: "Every edge checked and sealed before final handover.",
+      },
+    ],
+    signs: [
+      "You do a lot of highway driving and want to prevent stone chips",
+      "You just bought a new car and want to protect the factory paint",
+      "You're planning to sell or trade in and want to preserve resale value",
+      "You want protection that doesn't change your car's appearance",
+    ],
+    related: [
+      "vehicle-styling",
+      "window-tinting",
+      "installation-services",
+    ],
+  },
+
+  "interior-lighting-installation": {
+    slug: "interior-lighting-installation",
+    name: "Interior Lighting Installation",
+    heroSubline:
+      "App-controlled ambient lighting, professionally wired for a factory-integrated look.",
+    heroImage:
+      "https://images.unsplash.com/photo-1748569924394-1cd406885eb4?w=1600&q=80",
+    whatIsIt: {
+      image:
+        "https://images.unsplash.com/photo-1633078674059-35d72a5bd19a?w=900&q=80",
+      paragraphs: [
+        "Ambient interior lighting is one of the most noticeable cabin upgrades you can make — footwells, door panels, and dash trim lit in colours that match your style, controllable from your phone.",
+        "The difference between a factory-look install and an obviously aftermarket one comes down to wiring. We route and secure every strip and cable out of sight, tap power cleanly from your fuse box, and test every zone and colour mode before handover.",
+        "Kits range from simple two-zone footwell lighting to full multi-zone setups synced to music or app-controlled scenes — we'll help you pick a setup that matches your vehicle and budget.",
+      ],
+    },
+    quickFacts: [
+      "App-controlled, multiple colour modes and brightness settings",
+      "Wiring hidden and secured for a factory-integrated look",
+      "Clean fuse box power tap, not a battery clip left dangling",
+      "Two-zone footwell up to full multi-zone kits available",
+      "Every zone and colour mode tested before handover",
+    ],
+    howItWorks: [
+      {
+        title: "Kit Selection",
+        description:
+          "Choose a lighting kit and zones based on your vehicle and style.",
+      },
+      {
+        title: "Wiring & Mounting",
+        description:
+          "Strips secured and cabling routed out of sight, tapped cleanly into your fuse box.",
+      },
+      {
+        title: "App Pairing",
+        description:
+          "Controller paired to the companion app for colour and mode control.",
+      },
+      {
+        title: "Zone Test",
+        description:
+          "Every zone and colour mode checked before you drive away.",
+      },
+    ],
+    signs: [
+      "You want your cabin to feel more personalized after dark",
+      "You've seen ambient lighting on other builds and want the same clean look",
+      "You've tried a DIY kit and the wiring is visible or unreliable",
+      "You want app or music-synced lighting control, not just a fixed colour",
+    ],
+    related: [
+      "car-customization",
+      "dash-cam-installation",
+      "vehicle-styling",
     ],
   },
 };

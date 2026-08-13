@@ -15,14 +15,22 @@ import {
 export const SITE = {
   name: "Luxe Auto Accessories",
   tagline: "Passion for Cars. Commitment to Quality.",
-  phone: "+1 437-265-9090",
-  email: "info@luxeautoaccessories.com",
-  address: "96 Planchet Rd, Vaughan, ON L4K 2C7, Canada",
+  phone: "+1 437 265 9090",
+  email: "Sales.luxeauto@gmail.com",
+  address: "966 Pantera Dr #21, Mississauga ON L4W 2S1, Canada",
   hours: [
-    { days: "Mon–Fri", time: "8:00am – 6:00pm" },
-    { days: "Sat", time: "9:00am – 4:00pm" },
-    { days: "Sun", time: "Closed" },
+    { days: "Mon–Fri", time: "8:00am – 7:00pm" },
+    { days: "Sat", time: "9:00am – 6:00pm" },
+    { days: "Sun", time: "9:00am – 5:00pm" },
   ],
+};
+
+// WhatsApp intentionally omitted pending client confirmation of the correct link —
+// see the commented placeholder slot in Footer.tsx for where it goes once confirmed.
+export const SOCIAL_LINKS = {
+  instagram: "https://www.instagram.com/luxeauto_accessories",
+  tiktok: "https://www.tiktok.com/@luxeauto_accessories",
+  facebook: "https://www.facebook.com/luxeautoaccessories",
 };
 
 export const NAV_LINKS = [
@@ -88,7 +96,7 @@ export const VALUES = [
     number: "04",
     title: "Community",
     description:
-      "Proudly serving Western Sydney, we're committed to being a trusted part of the local automotive community for years to come.",
+      "Proudly serving the Greater Toronto Area, we're committed to being a trusted part of the local automotive community for years to come.",
   },
 ];
 
@@ -102,14 +110,14 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Best automotive accessories shop I've used in Sydney. Honest advice, fair pricing, flawless installation.",
+      "Best automotive accessories shop I've used in Toronto. Honest advice, fair pricing, flawless installation.",
     name: "Priya Nair",
     vehicle: "Toyota RAV4 2022",
     rating: 5,
   },
   {
     quote:
-      "Walked in not knowing what I wanted for my ute, walked out with a full interior refresh. Same-day install as promised.",
+      "Walked in not knowing what I wanted for my truck, walked out with a full interior refresh. Same-day install as promised.",
     name: "Marcus Webb",
     vehicle: "Ford Ranger 2020",
     rating: 4,
@@ -151,9 +159,8 @@ export const CATEGORIES = [
   "Seat Covers",
   "Electronics",
   "Steering & Wheel Accessories",
-  "Lighting",
-  "Storage & Organization",
   "Air Fresheners & Fragrance",
+  "Tires",
 ];
 
 export const PRODUCTS: Product[] = [
@@ -177,69 +184,6 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewCount: 42,
     image: "/images/products/steering-wheel-cover/color-options.jpg",
-  },
-  {
-    slug: "console-organizer",
-    name: "Console Organizer",
-    category: "Interior Accessories",
-    price: 35,
-    compareAtPrice: 50,
-    description: "Center console organizer for phones, keys, and small items.",
-    fullDescription:
-      "Keep your center console tidy with dedicated slots for your phone, keys, cards, and other small essentials — no more digging through a cluttered console on the go.",
-    features: [
-      "Multiple storage compartments",
-      "Non-slip base",
-      "Fits most consoles",
-      "Easy-clean material",
-    ],
-    rating: 4.5,
-    reviewCount: 27,
-    image:
-      "https://images.unsplash.com/photo-1633586020715-0b462f444ed3?w=800&q=80",
-  },
-  {
-    slug: "seat-gap-filler-set",
-    name: "Seat Gap Filler Set",
-    category: "Interior Accessories",
-    price: 25,
-    compareAtPrice: 35,
-    description:
-      "Prevents items falling between seats. Easy tool-free installation.",
-    fullDescription:
-      "These flexible fillers seal the gap between your seat and console, stopping phones, coins, and other small items from disappearing down the side of your seat. Tool-free install in minutes.",
-    features: [
-      "Tool-free installation",
-      "Flexible, durable material",
-      "Universal fit",
-      "Set of 2",
-    ],
-    rating: 4.4,
-    reviewCount: 19,
-    image:
-      "https://images.unsplash.com/photo-1760161339261-56487b766a17?w=800&q=80",
-  },
-  {
-    slug: "3d-carbon-fibre-floor-mats",
-    name: "3D Carbon Fibre Floor Mats (Set of 4)",
-    category: "Exterior Accessories",
-    price: 199,
-    compareAtPrice: 249,
-    badge: "BEST SELLER",
-    description:
-      "Precision-molded all-weather protection with a premium carbon fibre finish.",
-    fullDescription:
-      "Precision-molded to hug your vehicle's floor pan, these all-weather mats trap mud, water, and debris while adding a premium carbon fibre finish to your interior. Built to handle daily wear without cracking or fading.",
-    features: [
-      "Precision-molded fit",
-      "All-weather protection",
-      "Carbon fibre finish",
-      "Set of 4",
-    ],
-    rating: 4.8,
-    reviewCount: 64,
-    image:
-      "https://images.unsplash.com/photo-1553260188-75a8d6205b6c?w=800&q=80",
   },
   {
     slug: "window-visors-rain-guards",
@@ -320,26 +264,6 @@ export const PRODUCTS: Product[] = [
       "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&q=80",
   },
   {
-    slug: "detailing-bundle",
-    name: "Interior & Exterior Detailing Bundle",
-    category: "Car Care Products",
-    price: 65,
-    compareAtPrice: 89,
-    description: "Complete kit for a showroom-finish clean, inside and out.",
-    fullDescription:
-      "Everything you need for a showroom-finish clean — interior wipe-downs, glass cleaner, and exterior wash-and-wax products bundled together in one complete kit.",
-    features: [
-      "Complete detailing kit",
-      "Interior & exterior products",
-      "Showroom-finish results",
-      "Great value bundle",
-    ],
-    rating: 4.6,
-    reviewCount: 29,
-    image:
-      "https://images.unsplash.com/photo-1493238792000-8113da705763?w=800&q=80",
-  },
-  {
     slug: "premium-leather-seat-cover-set",
     name: "Premium Leather Seat Cover Set",
     category: "Seat Covers",
@@ -376,26 +300,6 @@ export const PRODUCTS: Product[] = [
     reviewCount: 58,
     image: getDefaultVariant().images[0],
     detailHref: `/products/${PREMIUM_UNIVERSAL_SEAT_COVERS.slug}`,
-  },
-  {
-    slug: "neoprene-waterproof-seat-cover-set",
-    name: "Neoprene Waterproof Seat Cover Set",
-    category: "Seat Covers",
-    price: 189,
-    compareAtPrice: 229,
-    description: "Durable, waterproof, and easy to clean.",
-    fullDescription:
-      "Built from durable, waterproof neoprene, these seat covers are made for daily life — spills, mud, sand, and pet hair wipe clean in seconds without soaking through to your factory seats.",
-    features: [
-      "Waterproof neoprene",
-      "Easy wipe-clean",
-      "Durable daily use",
-      "Universal fit",
-    ],
-    rating: 4.6,
-    reviewCount: 24,
-    image:
-      "https://images.unsplash.com/photo-1748621020739-d1df8bfe293d?w=800&q=80",
   },
   {
     slug: "full-hd-dash-camera",
@@ -440,69 +344,6 @@ export const PRODUCTS: Product[] = [
     reviewCount: 21,
     image:
       "https://images.unsplash.com/photo-1615135902020-f499dc74b655?w=800&q=80",
-  },
-  {
-    slug: "alloy-wheel-spacers",
-    name: "Alloy Wheel Spacers (Set of 4)",
-    category: "Steering & Wheel Accessories",
-    price: 129,
-    compareAtPrice: 169,
-    description:
-      "Precision-engineered for a wider stance and improved handling.",
-    fullDescription:
-      "Precision-engineered spacers that push your wheels out for a wider, more aggressive stance while improving handling and stability through corners.",
-    features: [
-      "Precision-engineered fit",
-      "Wider stance",
-      "Improved handling",
-      "Set of 4",
-    ],
-    rating: 4.6,
-    reviewCount: 18,
-    image:
-      "https://images.unsplash.com/photo-1741366175071-3604c86ec475?w=800&q=80",
-  },
-  {
-    slug: "led-headlight-upgrade-kit",
-    name: "LED Headlight Upgrade Kit",
-    category: "Lighting",
-    price: 159,
-    compareAtPrice: 199,
-    badge: "NEW",
-    description:
-      "Brighter, whiter light output with plug-and-play installation.",
-    fullDescription:
-      "Swap out dim factory bulbs for brighter, whiter LED output with a simple plug-and-play install — no cutting, no splicing, just a clearer view of the road ahead.",
-    features: [
-      "Brighter, whiter light",
-      "Plug-and-play install",
-      "Long lifespan",
-      "Improved night visibility",
-    ],
-    rating: 4.7,
-    reviewCount: 45,
-    image:
-      "https://images.unsplash.com/photo-1683791737647-e3e6efb1e2f2?w=800&q=80",
-  },
-  {
-    slug: "boot-trunk-organizer",
-    name: "Boot/Trunk Organizer",
-    category: "Storage & Organization",
-    price: 45,
-    compareAtPrice: 65,
-    description: "Collapsible, heavy-duty organizer to keep cargo space tidy.",
-    fullDescription:
-      "A collapsible, heavy-duty organizer that keeps your cargo space tidy — groceries, tools, and gear stay upright and separated instead of sliding around the boot.",
-    features: [
-      "Collapsible design",
-      "Heavy-duty construction",
-      "Keeps cargo organized",
-      "Folds flat for storage",
-    ],
-    rating: 4.5,
-    reviewCount: 26,
-    image:
-      "https://images.unsplash.com/photo-1683027908780-4fbd958ee580?w=800&q=80",
   },
   {
     slug: DELUXE_SEAT_COVERS.slug,
@@ -677,22 +518,21 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "all-weather-tpe-floor-mats",
-    name: "All-Weather TPE Floor Mats (Custom-Fit)",
+    name: "Premium 5D Custom TPE Floor Mats",
     category: "Exterior Accessories",
     price: 179,
     description:
-      "Laser-scanned custom-fit TPE floor mats with deep ridges and edge-to-edge coverage to trap mud, slush, and spills.",
+      "Precision fit 5D floor mats made from 100 percent original TPE material, offering complete all-weather protection.",
     fullDescription:
-      "Precision laser-scanned for a true custom fit, these TPE floor mats feature deep ridges and grooves that trap mud, slush, and debris before it reaches your carpet. Built from eco-friendly, heavy-duty TPE material that resists heat, cracking, and wear from -60°C to 150°C, with raised edges for full edge-to-edge coverage.",
+      "Protect your vehicle's interior with precision fit mats made from 100 percent original TPE material. These 5D floor mats offer complete all-weather protection with raised edges to contain mud, snow, water, and spills. Durable, odourless, waterproof, and easy to clean, our mats are designed to handle Canada's toughest seasons. Professional installation is available at Luxe Auto Accessories to ensure a perfect fit and a clean, factory look that elevates your vehicle's interior.",
     features: [
-      "Laser-scanned custom fit",
-      "Eco-friendly TPE material",
-      "Waterproof & easy to clean",
-      "Heavy-duty & anti-slip",
-      "Heat & crack resistant (-60°C to 150°C)",
-      "Edge-to-edge coverage",
-      "High ridges trap mud & debris",
-      "Scratch-proof surface",
+      "100% original TPE material",
+      "Precision custom fit",
+      "5D raised-edge design",
+      "All-weather protection (mud, snow, water, spills)",
+      "Durable and odourless",
+      "Waterproof and easy to clean",
+      "Professional installation available",
     ],
     rating: 4.6,
     reviewCount: 18,
@@ -714,6 +554,42 @@ export const PRODUCTS: Product[] = [
       {
         image: "/images/products/floor-mats-tpe/before-after.jpg",
         caption: "Refresh the look of your interior",
+      },
+    ],
+  },
+  {
+    // PENDING CLIENT CONFIRMATION — name, description, and price below are
+    // placeholders written to match the site's tone. No product photos exist
+    // yet for this SKU; using licensed stock tire photography in the meantime.
+    slug: "all-season-tires",
+    name: "All-Season Performance Tires",
+    category: "Tires",
+    price: 159,
+    priceUnconfirmed: true,
+    badge: "NEW",
+    description:
+      "Reliable all-season tires built for year-round grip and a smooth, quiet ride. Details pending final confirmation.",
+    fullDescription:
+      "Keep your vehicle planted in rain, shine, and light winter conditions with our all-season performance tires. Engineered for a balance of grip, tread life, and a quiet ride, they're a solid everyday choice backed by our fast, professional tire change service. Exact sizing, pricing, and full specs are still being finalized with our supplier — this listing is a placeholder pending final client confirmation before launch.",
+    features: [
+      "All-season tread compound",
+      "Reliable wet and dry grip",
+      "Reduced road noise",
+      "Fast professional fitting available in-store",
+      "Sizing and full specs pending confirmation",
+    ],
+    rating: 4.6,
+    reviewCount: 12,
+    image:
+      "https://images.unsplash.com/photo-1753030148904-16130157a3e5?w=800&q=80",
+    gallery: [
+      "https://images.unsplash.com/photo-1656232976683-7b688560e427?w=800&q=80",
+    ],
+    detailsGallery: [
+      {
+        image:
+          "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?w=800&q=80",
+        caption: "Professional tire fitting available in-store",
       },
     ],
   },
@@ -765,11 +641,11 @@ export const SMART_DASH_CAM_DETAILS: { image: string; caption: string }[] = [
 ];
 
 const FEATURED_PRODUCT_SLUGS = [
-  "3d-carbon-fibre-floor-mats",
+  PREMIUM_UNIVERSAL_SEAT_COVERS.slug,
   "full-hd-dash-camera",
   "premium-leather-seat-cover-set",
   "ceramic-coating-kit",
-  "led-headlight-upgrade-kit",
+  "smart-dash-cam-system",
   "premium-leather-steering-wheel-cover",
 ];
 
@@ -826,7 +702,7 @@ export const MISSION_VISION_PURPOSE = [
   },
   {
     title: "Vision",
-    heading: "Australia's Most Trusted Auto Accessories Brand",
+    heading: "Canada's Most Trusted Auto Accessories Brand",
     description:
       "We envision Luxe Auto Accessories as synonymous with quality, reliability, and automotive passion — the go-to destination for drivers who demand the best.",
     width: "wide" as const,
@@ -888,6 +764,46 @@ export const SERVICES = [
       "Expert fitting of window visors and rain guards, allowing airflow while keeping rain out — installed cleanly with no residue or panel damage.",
     image:
       "https://images.unsplash.com/photo-1744236404781-530428ffbad5?w=900&q=80",
+  },
+  {
+    slug: "tire-change-service",
+    title: "Tire Change Service",
+    description:
+      "Fast, professional tire changes, swaps, and rotations — walk in or book ahead, most vehicles done in under 30 minutes.",
+    image:
+      "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?w=900&q=80",
+  },
+  {
+    slug: "dash-cam-installation",
+    title: "Dash Cam Installation",
+    description:
+      "Clean, hardwired dash cam installs with hidden cabling — front, rear, and mirror-style systems all professionally fitted.",
+    image:
+      "/images/products/dash-cam/installation-suction-typec.jpg",
+  },
+  {
+    slug: "window-tinting",
+    title: "Window Tinting",
+    description:
+      "Professional-grade window tint for heat rejection, privacy, and UV protection, applied bubble-free and legally compliant.",
+    image:
+      "https://images.unsplash.com/photo-1761123090853-9262493448c4?w=900&q=80",
+  },
+  {
+    slug: "paint-protection-film",
+    title: "Paint Protection Film (PPF)",
+    description:
+      "Self-healing, invisible film that shields your paint from chips, scratches, and road debris while preserving the factory finish.",
+    image:
+      "https://images.unsplash.com/photo-1679897422600-dbcc37196105?w=900&q=80",
+  },
+  {
+    slug: "interior-lighting-installation",
+    title: "Interior Lighting Installation",
+    description:
+      "App-controlled ambient interior lighting professionally wired and installed for a clean, factory-integrated finish.",
+    image:
+      "https://images.unsplash.com/photo-1748569924394-1cd406885eb4?w=900&q=80",
   },
 ];
 

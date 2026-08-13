@@ -34,7 +34,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="eyebrow mb-4 text-red-500"
           >
-            Sydney&apos;s Premier Automotive Destination
+            Ontario&apos;s Premier Automotive Destination
           </motion.p>
 
           <motion.h1

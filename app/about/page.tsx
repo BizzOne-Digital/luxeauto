@@ -8,7 +8,7 @@ import { CtaBanner } from "@/components/ui/CtaBanner";
 export const metadata: Metadata = {
   title: "About Us | Luxe Auto Accessories",
   description:
-    "From a small Fairfield workshop to Western Sydney's most trusted automotive accessories destination — learn the story behind Luxe Auto Accessories.",
+    "From a small Mississauga workshop to the Greater Toronto Area's most trusted automotive accessories destination — learn the story behind Luxe Auto Accessories.",
 };
 
 export default function AboutPage() {

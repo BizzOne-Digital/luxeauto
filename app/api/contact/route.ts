@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   try {
     await resend.emails.send({
       from: "Luxe Auto Accessories <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL_TO ?? "info@luxeautoaccessories.com.au",
+      to: process.env.CONTACT_EMAIL_TO ?? "Sales.luxeauto@gmail.com",
       replyTo: email,
       subject: `New enquiry from ${name}`,
       text: [
