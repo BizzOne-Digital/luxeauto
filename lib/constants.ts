@@ -204,11 +204,6 @@ export const PRODUCTS: Product[] = [
     rating: 4.6,
     reviewCount: 31,
     image: "/images/products/window-visors/airflow-diagram.jpg",
-    gallery: [
-      "/images/products/window-visors/fitment-detail.jpg",
-      "/images/products/window-visors/window-trim-view.jpg",
-      "/images/products/window-visors/pillar-mount-arrows.jpg",
-    ],
     detailsGallery: [
       {
         image: "/images/products/window-visors/why-install-benefits.jpg",
@@ -217,6 +212,18 @@ export const PRODUCTS: Product[] = [
       {
         image: "/images/products/window-visors/pillar-trim-closeup.jpg",
         caption: "Clean pillar-mount trim fit",
+      },
+      {
+        image: "/images/products/window-visors/trim-clip-install-guide.jpg",
+        caption: "No-drill trim-clip installation guide",
+      },
+      {
+        image: "/images/products/window-visors/fitted-pickup-truck.jpg",
+        caption: "Fitted on a full-size pickup truck",
+      },
+      {
+        image: "/images/products/window-visors/fitted-jeep-wrangler.jpg",
+        caption: "Fitted on a 4-door Jeep Wrangler",
       },
     ],
   },
@@ -239,7 +246,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.5,
     reviewCount: 22,
     image:
-      "https://images.unsplash.com/photo-1688385822171-410271d223b3?w=800&q=80",
+      "https://images.unsplash.com/photo-1694420085351-87374a9ba405?w=800&q=80",
   },
   {
     slug: "ceramic-coating-kit",
@@ -540,10 +547,6 @@ export const PRODUCTS: Product[] = [
     gallery: ["/images/products/floor-mats-tpe/wear-resistant.jpg"],
     detailsGallery: [
       {
-        image: "/images/products/floor-mats-tpe/waterproof-test.jpg",
-        caption: "Waterproof and easy to clean",
-      },
-      {
         image: "/images/products/floor-mats-tpe/high-ridges-grooves.jpg",
         caption: "High ridges capture mud, slush, and debris",
       },
@@ -554,6 +557,19 @@ export const PRODUCTS: Product[] = [
       {
         image: "/images/products/floor-mats-tpe/before-after.jpg",
         caption: "Refresh the look of your interior",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/heat-resistance-test.jpg",
+        caption: "Heat and flame resistant",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/tpe-material-specs.jpg",
+        caption:
+          "Waterproof, easy to clean, eco-friendly TPE, heat and crack resistant",
+      },
+      {
+        image: "/images/products/floor-mats-tpe/hose-rinse-test.jpg",
+        caption: "Rinses clean in seconds",
       },
     ],
   },
@@ -583,13 +599,51 @@ export const PRODUCTS: Product[] = [
     image:
       "https://images.unsplash.com/photo-1753030148904-16130157a3e5?w=800&q=80",
     gallery: [
-      "https://images.unsplash.com/photo-1656232976683-7b688560e427?w=800&q=80",
+      "https://images.unsplash.com/photo-1685270387102-5c0fccf96ad9?w=800&q=80",
     ],
     detailsGallery: [
       {
         image:
-          "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?w=800&q=80",
-        caption: "Professional tire fitting available in-store",
+          "https://images.unsplash.com/photo-1751601397743-fed8bbfd2965?w=800&q=80",
+        caption: "Precision tread pattern for reliable all-season grip",
+      },
+    ],
+  },
+  {
+    // PENDING CLIENT CONFIRMATION — name, description, price, and features
+    // below are placeholders written to match the site's tone based on what's
+    // visible in the product photos. Vehicle compatibility is deliberately
+    // omitted since exact make/model fitment hasn't been confirmed.
+    slug: "truck-canopy-hard-topper",
+    name: "Truck Canopy (Hard Topper)",
+    category: "Exterior Accessories",
+    price: 599,
+    priceUnconfirmed: true,
+    badge: "NEW",
+    description:
+      "A durable, enclosed truck bed canopy offering secure, weatherproof cargo protection and added storage versatility. Details pending final confirmation.",
+    fullDescription:
+      "This hard truck canopy transforms your open bed into secure, weatherproof enclosed storage. Raised roof panels with integrated side rails add cargo capacity up top, while lockable rear and side access keep gear protected from the elements and out of sight. Exact fitment, materials, and full specs are still being finalized with our supplier — this listing is a placeholder pending final client confirmation before launch.",
+    features: [
+      "Raised, fully enclosed hard-shell design",
+      "Lockable rear and side access points",
+      "Integrated roof rails for extra cargo capacity",
+      "Weatherproof seal for secure, dry storage",
+      "Tinted side windows",
+      "Mounting hardware included",
+      "Fitment and full specs pending confirmation",
+    ],
+    rating: 4.5,
+    reviewCount: 8,
+    image: "/images/products/truck-canopy/hero-standalone.jpg",
+    gallery: [
+      "/images/products/truck-canopy/installed-ford-angle-1.jpg",
+      "/images/products/truck-canopy/installed-ford-angle-2.jpg",
+    ],
+    detailsGallery: [
+      {
+        image: "/images/products/truck-canopy/exploded-components-view.jpg",
+        caption: "Component breakdown — roof panel, side doors, and hardware",
       },
     ],
   },
