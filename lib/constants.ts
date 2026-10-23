@@ -543,8 +543,7 @@ export const PRODUCTS: Product[] = [
     ],
     rating: 4.6,
     reviewCount: 18,
-    image: "/images/products/floor-mats-tpe/hero-rav4-set.jpg",
-    gallery: ["/images/products/floor-mats-tpe/wear-resistant.jpg"],
+    image: "/images/products/floor-mats-tpe/wear-resistant-strength.jpg",
     detailsGallery: [
       {
         image: "/images/products/floor-mats-tpe/high-ridges-grooves.jpg",
@@ -561,11 +560,6 @@ export const PRODUCTS: Product[] = [
       {
         image: "/images/products/floor-mats-tpe/heat-resistance-test.jpg",
         caption: "Heat and flame resistant",
-      },
-      {
-        image: "/images/products/floor-mats-tpe/tpe-material-specs.jpg",
-        caption:
-          "Waterproof, easy to clean, eco-friendly TPE, heat and crack resistant",
       },
       {
         image: "/images/products/floor-mats-tpe/hose-rinse-test.jpg",
