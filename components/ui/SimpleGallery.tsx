@@ -8,10 +8,14 @@ import { cn } from "@/lib/utils";
 export function SimpleGallery({
   images,
   alt,
+  imageFit = "cover",
 }: {
   images: string[];
   alt: string;
+  imageFit?: "cover" | "contain";
 }) {
+  const fitClass =
+    imageFit === "contain" ? "object-contain p-2" : "object-cover";
   const [activeImage, setActiveImage] = useState(0);
 
   return (
@@ -32,7 +36,7 @@ export function SimpleGallery({
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className={fitClass}
             />
           </motion.div>
         </AnimatePresence>

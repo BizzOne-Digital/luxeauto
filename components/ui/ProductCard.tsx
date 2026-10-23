@@ -20,7 +20,11 @@ export function ProductCard({ product }: { product: Product }) {
           alt={product.name}
           fill
           sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          className={
+            product.imageFit === "contain"
+              ? "object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105"
+              : "object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          }
         />
         {product.badge && (
           <div className="absolute left-4 top-4">

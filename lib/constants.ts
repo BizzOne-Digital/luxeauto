@@ -148,6 +148,8 @@ export type Product = {
   defaultVariantSlug?: string;
   /** Additional main-gallery images (no color variants) shown alongside `image` as a thumbnail-swappable gallery */
   gallery?: string[];
+  /** Main product image fit in 4:3 frames (default cover). Use contain for tall catalog art. */
+  imageFit?: "cover" | "contain";
   /** Extra captioned detail shots shown below the main Quick View content */
   detailsGallery?: { image: string; caption: string }[];
 };
@@ -544,6 +546,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.6,
     reviewCount: 18,
     image: "/images/products/floor-mats-tpe/hero-rav4-set.jpg",
+    imageFit: "contain",
     detailsGallery: [
       {
         image: "/images/products/floor-mats-tpe/high-ridges-grooves.jpg",

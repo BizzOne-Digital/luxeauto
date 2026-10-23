@@ -111,6 +111,7 @@ export function QuickViewModal({
                   <SimpleGallery
                     images={[product.image, ...(product.gallery ?? [])]}
                     alt={product.name}
+                    imageFit={product.imageFit}
                   />
                 )}
               </div>
