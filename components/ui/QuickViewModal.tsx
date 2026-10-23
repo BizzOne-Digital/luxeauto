@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "@/components/ui/Badge";
@@ -108,21 +107,11 @@ export function QuickViewModal({
                     }
                     productName={product.name}
                   />
-                ) : product.gallery ? (
+                ) : (
                   <SimpleGallery
-                    images={[product.image, ...product.gallery]}
+                    images={[product.image, ...(product.gallery ?? [])]}
                     alt={product.name}
                   />
-                ) : (
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:aspect-auto md:h-full">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
                 )}
               </div>
 
