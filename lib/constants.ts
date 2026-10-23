@@ -543,7 +543,7 @@ export const PRODUCTS: Product[] = [
     ],
     rating: 4.6,
     reviewCount: 18,
-    image: "/images/products/floor-mats-tpe/wear-resistant-strength.jpg",
+    image: "/images/products/floor-mats-tpe/hero-rav4-set.jpg",
     detailsGallery: [
       {
         image: "/images/products/floor-mats-tpe/high-ridges-grooves.jpg",
