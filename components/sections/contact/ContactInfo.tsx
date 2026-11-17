@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/constants";
+import { GetDirectionsButton } from "./GetDirectionsButton";
 
 export function ContactInfo() {
   return (
@@ -65,6 +66,7 @@ export function ContactInfo() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+      <GetDirectionsButton />
     </div>
   );
 }

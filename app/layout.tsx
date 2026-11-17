@@ -35,11 +35,14 @@ export default function RootLayout({
       <head>
         {/* Google Tag (GTM-5MTKDJD5) */}
         <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5MTKDJD5"></script>
+        {/* Google Ads tag (AW-18480860036) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18480860036"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());`,
+gtag('js', new Date());
+gtag('config', 'AW-18480860036');`,
           }}
         />
       </head>
