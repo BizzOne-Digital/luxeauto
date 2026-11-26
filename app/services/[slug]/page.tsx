@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { CtaBanner } from "@/components/ui/CtaBanner";
+import { CallStrip } from "@/components/ui/CallStrip";
+import { PHONE_HREF, SITE } from "@/lib/constants";
 import { ServiceDetailHero } from "@/components/sections/service-detail/ServiceDetailHero";
 import { WhatIsIt } from "@/components/sections/service-detail/WhatIsIt";
 import { QuickFacts } from "@/components/sections/service-detail/QuickFacts";
@@ -55,6 +57,7 @@ export default function ServiceDetailPage({
         serviceName={service.name}
       />
       <QuickFacts facts={service.quickFacts} />
+      <CallStrip heading={`Interested in ${service.name}?`} />
       <HowItWorksDetail steps={service.howItWorks} />
       <SignsYouNeedThis signs={service.signs} />
       <RelatedServices slugs={service.related} />
@@ -63,8 +66,8 @@ export default function ServiceDetailPage({
         subtext="Same-day service available on most items, with a 12-month workmanship warranty."
         primaryLabel="Book This Service"
         primaryHref="/contact"
-        secondaryLabel="Contact Us"
-        secondaryHref="/contact"
+        secondaryLabel={`Call ${SITE.phone}`}
+        secondaryHref={PHONE_HREF}
       />
     </>
   );

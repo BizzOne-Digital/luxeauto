@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { GalleryExplorer } from "@/components/sections/gallery/GalleryExplorer";
 import { CtaBanner } from "@/components/ui/CtaBanner";
+import { BeforeAfter } from "@/components/sections/gallery/BeforeAfter";
 
 export const metadata: Metadata = {
   title: "Gallery | Luxe Auto Accessories",
@@ -17,6 +18,7 @@ export default function GalleryPage() {
         title="See the Transformation"
         subtitle="A look at recent installations, detailing work, and vehicle transformations completed by our team."
       />
+      <BeforeAfter />
       <GalleryExplorer />
       <CtaBanner
         heading="Want Results Like These?"

@@ -34,9 +34,15 @@ export default function RootLayout({
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <head>
         {/* Google Tag (GTM-5MTKDJD5) */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5MTKDJD5"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-5MTKDJD5"
+        ></script>
         {/* Google Ads tag (AW-18480860036) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18480860036"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18480860036"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];

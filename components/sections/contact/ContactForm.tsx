@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ const inputClasses =
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -35,6 +37,7 @@ export function ContactForm() {
 
       setStatus("success");
       form.reset();
+      router.push("/thank-you");
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FOOTER_LINKS, SITE } from "@/lib/constants";
+import { FOOTER_LINKS, PHONE_HREF, SERVICE_AREAS, SITE } from "@/lib/constants";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -20,13 +20,21 @@ export function Footer() {
               Premium automotive accessories and professional installation.
               Transform your car with quality products and expert craftsmanship.
             </p>
-            <p className="mb-6 text-sm leading-relaxed text-neutral-500">
-              {SITE.address}
-              <br />
-              {SITE.phone}
-              <br />
-              {SITE.email}
-            </p>
+            <address className="mb-6 flex flex-col gap-1 text-sm not-italic leading-relaxed text-neutral-500">
+              <span>{SITE.address}</span>
+              <a
+                href={PHONE_HREF}
+                className="w-fit font-medium text-white transition-colors hover:text-red-500"
+              >
+                {SITE.phone}
+              </a>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="w-fit transition-colors hover:text-red-500"
+              >
+                {SITE.email}
+              </a>
+            </address>
             <SocialIcons />
           </div>
 
@@ -85,7 +93,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-neutral-800 pt-8">
+        <div className="mt-14 border-t border-neutral-800 pt-10">
+          <h4 className="mb-4 font-heading text-sm font-semibold uppercase tracking-widest text-white">
+            Areas We Serve
+          </h4>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {SERVICE_AREAS.map((area) => (
+              <li key={area.city} className="text-sm text-neutral-400">
+                {area.city}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 border-t border-neutral-800 pt-8">
           <p className="text-sm text-neutral-500">
             © 2026 {SITE.name}. All rights reserved.
           </p>

@@ -2,12 +2,6 @@
 
 import { SITE } from "@/lib/constants";
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
 export function GetDirectionsButton() {
   const href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address)}`;
 

@@ -509,7 +509,8 @@ export const PRODUCTS: Product[] = [
     detailsGallery: [
       {
         image: "/images/products/tonneau-cover/space-utilization.jpg",
-        caption: "Locked, partially folded, or fully folded for flexible access",
+        caption:
+          "Locked, partially folded, or fully folded for flexible access",
       },
       {
         image: "/images/products/tonneau-cover/confirm-size-1.jpg",
@@ -829,8 +830,7 @@ export const SERVICES = [
     title: "Dash Cam Installation",
     description:
       "Clean, hardwired dash cam installs with hidden cabling — front, rear, and mirror-style systems all professionally fitted.",
-    image:
-      "/images/products/dash-cam/installation-suction-typec.jpg",
+    image: "/images/products/dash-cam/installation-suction-typec.jpg",
   },
   {
     slug: "window-tinting",
@@ -965,3 +965,78 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspect: "square",
   },
 ];
+
+// ---------------------------------------------------------------------------
+// Website audit additions
+// ---------------------------------------------------------------------------
+
+export const PHONE_HREF = `tel:${SITE.phone.replace(/\s/g, "")}`;
+
+// Google Ads conversion label for successful form submissions (fires on /thank-you).
+// Create a "Form submission" conversion in Google Ads and paste its send_to value here,
+// e.g. "AW-18480860036/AbCdEfGhIj". Leave empty to skip firing.
+export const FORM_CONVERSION_SEND_TO = "";
+
+// Shown in the reviews section. Matches the figures already used in the hero —
+// confirm against the live Google Business Profile before launch.
+export const GOOGLE_REVIEWS = {
+  rating: 4.8,
+  count: 127,
+  url: "https://www.google.com/maps/search/?api=1&query=Luxe+Auto+Accessories+966+Pantera+Dr+Mississauga",
+};
+
+// DRAFT — confirm the final list of cities with the client.
+export const SERVICE_AREAS = [
+  { city: "Mississauga", note: "Our home base" },
+  { city: "Toronto", note: "Downtown & GTA" },
+  { city: "Etobicoke", note: "Minutes away" },
+  { city: "Brampton", note: "Easy access via 410" },
+  { city: "Oakville", note: "Via QEW" },
+  { city: "Milton", note: "Via 401" },
+  { city: "Vaughan", note: "Via 427 / 407" },
+  { city: "North York", note: "Via 401" },
+  { city: "Burlington", note: "Via QEW / 403" },
+  { city: "Scarborough", note: "Via 401" },
+];
+
+export const FAQS = [
+  {
+    q: "Do I need an appointment, or can I walk in?",
+    a: "Walk-ins are welcome for product purchases and quick advice. For installations we recommend booking ahead so a bay and technician are ready for your vehicle — call us or use the contact form.",
+  },
+  {
+    q: "How long does an installation take?",
+    a: "Most accessory installs such as dash cams, floor mats, seat covers and rain guards are completed the same day, often within an hour or two. Larger jobs like window tinting or paint protection film may need more time — we'll give you a clear timeframe when you book.",
+  },
+  {
+    q: "Is your installation work covered by a warranty?",
+    a: "Yes. Every installation comes with a 12-month workmanship warranty. Products are also covered by their manufacturer's warranty.",
+  },
+  {
+    q: "How much will my job cost?",
+    a: "Pricing depends on your vehicle and the products you choose. Contact us with your make and model and we'll give you a transparent quote — no hidden fees and no pressure to add things you don't need.",
+  },
+  {
+    q: "Will accessories fit my vehicle?",
+    a: "We check fitment for your exact make, model and year before you buy. If you're unsure, send us your vehicle details and our team will recommend the right products.",
+  },
+  {
+    q: "Can I bring my own products for installation?",
+    a: "In many cases, yes. Contact us with the product details and we'll confirm whether we can install it and what the cost would be.",
+  },
+  {
+    q: "Where are you located?",
+    a: `Our shop is at ${SITE.address}. We serve customers across Mississauga, Toronto and the wider GTA.`,
+  },
+];
+
+// Before & After projects. Add real client photos here (place files in /public/before-after/).
+// The section stays hidden until at least one entry exists.
+export type BeforeAfterItem = {
+  title: string;
+  service: string;
+  before: string;
+  after: string;
+};
+
+export const BEFORE_AFTER: BeforeAfterItem[] = [];
