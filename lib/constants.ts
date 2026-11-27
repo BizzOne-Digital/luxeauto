@@ -900,6 +900,56 @@ export type GalleryItem = {
 };
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  // Real Luxe Auto installs
+  {
+    slug: "deluxe-seat-covers",
+    title: "Deluxe Car Seat Covers",
+    category: "Interior",
+    image: "/gallery/deluxe-seat-covers.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "window-visor-red-sedan",
+    title: "Window Visor Install — Red Sedan",
+    category: "Exterior",
+    image: "/gallery/window-visor-red-sedan.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "tpe-floor-mats",
+    title: "Premium 5D Custom TPE Floor Mats",
+    category: "Interior",
+    image: "/gallery/tpe-floor-mats.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "window-visor-installed",
+    title: "Window Visor Install — Blue Sedan",
+    category: "Exterior",
+    image: "/gallery/window-visor-installed.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "window-visor-detail",
+    title: "Window Visor Detail",
+    category: "Exterior",
+    image: "/gallery/window-visor-detail.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "window-visor-set",
+    title: "Window Visor Set",
+    category: "Exterior",
+    image: "/gallery/window-visor-set.jpg",
+    aspect: "square",
+  },
+  {
+    slug: "window-visor-set-2",
+    title: "Window Visor Set — Ready to Install",
+    category: "Exterior",
+    image: "/gallery/window-visor-set-2.jpg",
+    aspect: "square",
+  },
   {
     slug: "full-interior-refresh-camry",
     title: "Full Interior Refresh — Toyota Camry",
@@ -1030,13 +1080,32 @@ export const FAQS = [
   },
 ];
 
-// Before & After projects. Add real client photos here (place files in /public/before-after/).
-// The section stays hidden until at least one entry exists.
+// Before & After projects — real client work (combined before/after images, square 1080px).
 export type BeforeAfterItem = {
   title: string;
   service: string;
-  before: string;
-  after: string;
+  image: string;
 };
 
-export const BEFORE_AFTER: BeforeAfterItem[] = [];
+export const BEFORE_AFTER: BeforeAfterItem[] = [
+  {
+    title: "Interior Upgrade — Pickup Truck",
+    service: "Seat Cover Installation",
+    image: "/before-after/seat-covers-truck.jpg",
+  },
+  {
+    title: "Window Visor Install — Red Sedan",
+    service: "Window Visor / Rain Guard",
+    image: "/before-after/window-visor-red.jpg",
+  },
+  {
+    title: "Custom-Fit Floor Mats",
+    service: "Car Mats & Trunk Liner",
+    image: "/before-after/floor-mats.jpg",
+  },
+  {
+    title: "Window Visor Install — Blue Sedan",
+    service: "Window Visor / Rain Guard",
+    image: "/before-after/window-visor-blue.jpg",
+  },
+];
